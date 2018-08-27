@@ -32,7 +32,7 @@ int len = removeDuplicates(nums);
 for (int i = 0; i < len; i++) {
     print(nums[i]);
 }*/
-package com.huawei;
+package com.ammyhaber;
 
 import org.junit.Test;
 
