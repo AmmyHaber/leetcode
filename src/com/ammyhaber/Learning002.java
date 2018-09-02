@@ -24,9 +24,29 @@
 解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。*/
 package com.ammyhaber;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 /**
+ * 买卖股票的最佳时机 II
  * @author ammy
  * @version [leetcode 1.0  2018/8/27]
  */
 public class Learning002 {
+
+    @Test
+    public void maxProfitTest() {
+        int[] prices = new int[]{7, 6, 4, 3, 1};
+        Assert.assertEquals(0, maxProfit(prices));
+    }
+
+    private int maxProfit(int[] prices) {
+        int result = 0;
+        for (int i = 0; i < prices.length - 1; i++) {
+            if (prices[i] < prices[i + 1]) {
+                result += prices[i + 1] - prices[i];
+            }
+        }
+        return result;
+    }
 }
